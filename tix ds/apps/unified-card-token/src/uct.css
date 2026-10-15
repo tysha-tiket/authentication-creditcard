@@ -1,0 +1,272 @@
+/* Layout only — colours, spacing, radius and shadow all come from the design system's tokens. */
+body {
+  margin: 0;
+  background: var(--tds-bg-sunken-surface);
+}
+
+.uct-stage {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.uct-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 412px;
+  min-height: 100vh;
+  background: var(--tds-bg-sunken-surface);
+}
+
+.uct-demo {
+  display: flex;
+  align-items: center;
+  gap: var(--tds-space-4);
+  padding: var(--tds-space-4) var(--tds-space-8);
+  background: var(--tds-bg-base-surface);
+  border-bottom: 1px solid var(--tds-stroke-light);
+  overflow-x: auto;
+}
+
+.uct-back {
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.uct-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--tds-space-12);
+  padding: var(--tds-space-16);
+}
+
+.uct-card,
+.uct-summary,
+.uct-option {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tds-space-12);
+  padding: var(--tds-space-16);
+  border-radius: var(--tds-radius-lg);
+  background: var(--tds-bg-base-surface);
+  box-shadow: var(--tds-elevation-e01);
+}
+
+.uct-card[data-legacy] {
+  border: 1px solid var(--tds-stroke-alert);
+}
+
+.uct-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tds-space-8);
+}
+
+.uct-option {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--tds-space-12);
+  cursor: pointer;
+}
+
+.uct-notice {
+  padding: var(--tds-space-12) var(--tds-space-16);
+  border-radius: var(--tds-radius-lg);
+  background: var(--tds-bg-low-orange);
+}
+
+.uct-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--tds-space-12);
+}
+
+.uct-sheet-list {
+  display: flex;
+  flex-direction: column;
+  padding: var(--tds-space-8) var(--tds-space-16) var(--tds-space-24);
+}
+
+.uct-sheet-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tds-space-12);
+  padding: var(--tds-space-12) 0;
+}
+
+.uct-footer {
+  position: sticky;
+  bottom: 0;
+  padding: var(--tds-space-16);
+  background: var(--tds-bg-base-surface);
+}
+
+.uct-done {
+  justify-content: center;
+  text-align: center;
+}
+
+.uct-toast {
+  position: absolute;
+  right: var(--tds-space-16);
+  bottom: var(--tds-space-24);
+  left: var(--tds-space-16);
+}
+
+.uct-card__row > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.uct-card__row .tds-badge,
+.uct-option .tds-badge {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.uct-option {
+  flex-wrap: nowrap;
+}
+
+/* Payment Methods list: grey rows on a white page, as in the live app. */
+.uct-methods {
+  gap: var(--tds-space-8);
+  background: var(--tds-bg-base-surface);
+}
+
+.uct-section {
+  margin-top: var(--tds-space-16);
+}
+
+.uct-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tds-space-12);
+  padding: var(--tds-space-12);
+  border: 0;
+  border-radius: var(--tds-radius-md);
+  background: var(--tds-bg-sunken-surface);
+  box-shadow: none;
+  text-align: left;
+}
+
+.uct-row--button {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--tds-space-12);
+  cursor: pointer;
+}
+
+.uct-row[data-legacy] {
+  border: 1px solid var(--tds-stroke-alert);
+}
+
+.uct-screen[data-version="2"] .uct-row[data-legacy] {
+  border-color: var(--tds-stroke-light);
+}
+
+.uct-row__main {
+  display: flex;
+  align-items: center;
+  gap: var(--tds-space-12);
+}
+
+.uct-row__text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.uct-row__end {
+  margin-left: auto;
+}
+
+.uct-logo {
+  width: 56px;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: var(--tds-radius-xs);
+}
+
+.uct-terms {
+  position: sticky;
+  bottom: 0;
+  padding: var(--tds-space-12) var(--tds-space-16);
+  background: var(--tds-bg-sunken-surface);
+}
+
+.uct-row__badge {
+  display: flex;
+  margin-top: var(--tds-space-4);
+}
+
+/* Add / re-enter card bottom sheet */
+.uct-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tds-space-12);
+  padding: var(--tds-space-8) var(--tds-space-16) var(--tds-space-24);
+}
+
+.uct-partners {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.uct-partners__logos {
+  display: flex;
+  gap: var(--tds-space-8);
+}
+
+.uct-protect {
+  display: flex;
+  align-items: center;
+  gap: var(--tds-space-12);
+  padding: var(--tds-space-12);
+  border-radius: var(--tds-radius-md);
+  background: var(--tds-bg-low-blue);
+}
+
+/* Keep sheets (and their scrim) inside the phone-width frame, not the whole browser window. */
+.uct-screen .tds-bottom-sheet {
+  inset: 0;
+  width: 100%;
+  max-width: 412px;
+  margin-inline: auto;
+}
+
+/* Payment page */
+.uct-pay { gap: var(--tds-space-16); padding: 0 0 var(--tds-space-24); background: var(--tds-bg-sunken-surface); }
+.uct-pay .tds-progress { padding: var(--tds-space-8) var(--tds-space-16); background: var(--tds-bg-base-surface); }
+.uct-order { margin: 0 var(--tds-space-16); }
+.uct-order__banner { padding: var(--tds-space-4) var(--tds-space-12); border-radius: var(--tds-radius-lg) var(--tds-radius-lg) 0 0; background: var(--tds-bg-high-green); }
+.uct-order__card { display: flex; flex-direction: column; gap: var(--tds-space-12); padding: var(--tds-space-16); border: 2px solid var(--tds-stroke-positive); border-radius: var(--tds-radius-lg); background: var(--tds-bg-base-surface); }
+.uct-order__timer, .uct-product, .uct-paybar { display: flex; align-items: center; justify-content: space-between; gap: var(--tds-space-12); }
+.uct-countdown { display: inline-flex; align-items: center; gap: var(--tds-space-4); }
+.uct-product { padding: var(--tds-space-8) var(--tds-space-12); border-radius: var(--tds-radius-md); background: var(--tds-bg-sunken-surface); }
+.uct-product > div { display: flex; flex-direction: column; }
+.uct-methods-card { display: flex; flex-direction: column; gap: var(--tds-space-8); margin: 0 var(--tds-space-16); padding: var(--tds-space-16); border-radius: var(--tds-radius-lg); background: var(--tds-bg-base-surface); box-shadow: var(--tds-elevation-e01); }
+.uct-method { display: flex; align-items: center; gap: var(--tds-space-12); padding: var(--tds-space-12); border-radius: var(--tds-radius-md); background: var(--tds-bg-sunken-surface); cursor: pointer; }
+.uct-method .tds-badge { flex-shrink: 0; white-space: nowrap; }
+.uct-seeall { display: flex; align-items: center; justify-content: center; gap: var(--tds-space-4); padding: var(--tds-space-4); border: 0; background: none; cursor: pointer; }
+.uct-seeall img[data-flipped] { transform: rotate(180deg); }
+.uct-paybar { position: sticky; bottom: 0; padding: var(--tds-space-12) var(--tds-space-16); background: var(--tds-bg-base-surface); box-shadow: var(--tds-elevation-e01); }
+.uct-paybar__total { display: flex; align-items: center; }
+
+/* Scenario menu */
+.uct-start { background: var(--tds-bg-base-surface); }
+.uct-scenario { display: flex; flex-direction: column; align-items: flex-start; gap: var(--tds-space-8); padding: var(--tds-space-16); border: 0; border-radius: var(--tds-radius-lg); background: var(--tds-bg-sunken-surface); text-align: left; cursor: pointer; }
+.uct-scenario .tds-badge { white-space: nowrap; }
+
+.uct-version { padding: var(--tds-space-8) var(--tds-space-16); background: var(--tds-bg-base-surface); }

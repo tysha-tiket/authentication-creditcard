@@ -1,0 +1,61 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "home",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "tix ds/apps/home",
+        "run",
+        "dev"
+      ],
+      "port": 5275
+    },
+    {
+      "name": "design-system",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "tix ds/apps/kitchen-sink",
+        "run",
+        "dev"
+      ],
+      "port": 5273
+    },
+    {
+      "name": "example-prototype",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "tix ds/apps/example-prototype",
+        "run",
+        "dev"
+      ],
+      "port": 5276
+    },
+    {
+      "name": "unified-card-token",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "tix ds/apps/unified-card-token",
+        "run",
+        "dev"
+      ],
+      "port": 5277
+    },
+    {
+      "name": "site-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "-y",
+        "serve@14",
+        "public-site/public",
+        "-l",
+        "5280"
+      ],
+      "port": 5280
+    }
+  ]
+}

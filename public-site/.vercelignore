@@ -1,0 +1,7 @@
+build.mjs
+README.md
+.env.local
+.gitignore
+alternatives/
+set-password.sh
+deploy.log

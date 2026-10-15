@@ -1,0 +1,10 @@
+{
+  "name": "tiket-prototypes",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "preview": "npx -y serve@14 public -l 5280",
+    "deploy": "node build.mjs && npx -y vercel@latest deploy --prod"
+  }
+}

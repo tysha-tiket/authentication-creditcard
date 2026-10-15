@@ -1,0 +1,188 @@
+/*
+ * The project index.
+ *
+ * Portfolio chrome rather than product UI: this screen frames the prototypes, it isn't
+ * one of them. Type uses Tiket Odyssey Text.
+ */
+
+:root {
+  --home-page: #ffffff;
+  --home-ink: #21201c;
+  --home-ink-muted: #82827c;
+  --home-line: #ecebe9;
+  --home-line-hover: #d9d7d3;
+  --home-tile: #f9f9f8;
+  --home-radius: 8px;
+  --home-font:
+    "Tiket Odyssey Text", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--home-page);
+  color: var(--home-ink);
+  font-family: var(--home-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+}
+
+.home__column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.home__identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-inline: 8px;
+}
+
+.home__avatar {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border: 3px solid #ffffff;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow:
+    -2px -2px 4px rgba(0, 0, 0, 0.05),
+    2px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.home__name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  line-height: 1.25;
+  color: #000000;
+}
+
+.home__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+  padding: 9px 21px 9px 9px;
+  border: 1px solid var(--home-line);
+  border-radius: var(--home-radius);
+  background: #ffffff;
+  box-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.02),
+    0 1px 2px rgba(0, 0, 0, 0.03);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.card:hover {
+  border-color: var(--home-line-hover);
+  box-shadow:
+    2px 4px 10px rgba(0, 0, 0, 0.06),
+    0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--home-ink);
+  outline-offset: 2px;
+}
+
+.card__thumb {
+  display: block;
+  flex: none;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: var(--home-radius);
+  background: var(--home-tile);
+}
+
+.card__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.card__body {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 8px 20px;
+}
+
+.card__title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--home-ink);
+}
+
+.card__description {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--home-ink-muted);
+}
+
+.card__updated {
+  flex: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--home-ink-muted);
+  white-space: nowrap;
+}
+
+/* Narrow enough that the timestamp would squeeze the description to one word a line. */
+@media (max-width: 640px) {
+  .home {
+    padding: 40px 16px;
+  }
+
+  .card {
+    flex-wrap: wrap;
+    padding-right: 9px;
+  }
+
+  .card__body {
+    padding-bottom: 8px;
+  }
+
+  .card__updated {
+    width: 100%;
+    padding: 0 0 4px 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

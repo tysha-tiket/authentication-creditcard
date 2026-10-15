@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/tokens" },
+    { "path": "./packages/ui" },
+    { "path": "./apps/home" },
+    { "path": "./apps/kitchen-sink" },
+    { "path": "./apps/example-prototype" },
+    { "path": "./apps/unified-card-token" }
+  ]
+}

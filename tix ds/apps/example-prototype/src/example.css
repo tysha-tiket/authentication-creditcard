@@ -1,0 +1,58 @@
+/* Layout only — colours, spacing, radius and shadow all come from the design system's tokens. */
+body {
+  margin: 0;
+  background: var(--tds-bg-sunken-surface);
+}
+
+.ex-stage {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.ex-screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 412px;
+  min-height: 100vh;
+  background: var(--tds-bg-base-surface);
+}
+
+.ex-back {
+  display: inline-flex;
+  color: inherit;
+}
+
+.ex-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--tds-space-12);
+  padding: var(--tds-space-16);
+}
+
+.ex-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--tds-space-12);
+  padding: var(--tds-space-16);
+  border-radius: var(--tds-radius-lg);
+  background: var(--tds-bg-base-surface);
+  box-shadow: var(--tds-elevation-e01);
+}
+
+.ex-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 var(--tds-space-4);
+}
+
+.ex-footer {
+  position: sticky;
+  bottom: 0;
+  padding: var(--tds-space-16);
+  background: var(--tds-bg-base-surface);
+}
